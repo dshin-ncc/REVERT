@@ -137,8 +137,8 @@ cds <- estimateSizeFactors(cds)
 cds <- estimateDispersions(cds)
 
 # Define hyperparameters
-Ncellexp <- 3  # Minimum number of cells expressing each gene
-Vqval <- 0.001  # Q-value threshold for DEG selection
+Ncellexp <- 60  # Minimum number of cells expressing each gene
+Vqval <- 0.01  # Q-value threshold for DEG selection
 Nmaxcomp <- 2  # Maximum number of components for dimensionality reduction
 
 # Filter genes based on expression
@@ -163,9 +163,10 @@ plot_cell_trajectory(cds, color_by = "State") + facet_wrap(~State, nrow = 1)
 
 ##### Choose a sub-trajectory
 ################################
-# Select specific states (e.g., State 1)
-cds_s <- cds[, c(which(cds$State == 1))]
-
+# Select specific states (e.g., State 1&3)
+# cds_s <- cds[, c(which(cds$State == 1))]
+cds_s <- cds[,c(which(cds$State == 1), which(cds$State == 3))]
+                   
 # Define genes to test
 to_be_tested <- row.names(fData(cds_s))
 cds_subset <- cds_s[to_be_tested, ]
