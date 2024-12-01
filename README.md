@@ -23,6 +23,7 @@ Key Steps
 	•	Use super enhancer genes and CRC-related markers from MSigDB.
 	•	Combine these with HVGs to generate a comprehensive gene set of interest.
 	•	Generate Expression Matrix: Create a filtered expression matrix and corresponding metadata for downstream analysis.
+ Note) The uploaded data is a Seurat object that has been reduced to 5000 genes and 1000 cells due to size limitations in GitHub.
 
 
 
