@@ -174,7 +174,7 @@ cds_subset <- cds_s[to_be_tested, ]
 ##### Select DEGs by q-value
 ######################################
 # qval.list <- c(0.00001, 0.001, 0.05)
-qval.list <- c(0.05)
+qval.list <- c(0.001, 0.05)
 diff_test_res <- differentialGeneTest(cds_subset, fullModelFormulaStr = "~sm.ns(Pseudotime)")
 sig_diff <- diff_test_res[, c("gene_short_name", "pval", "qval")]
 
