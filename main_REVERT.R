@@ -245,7 +245,7 @@ library(stringr) # For string manipulation
 
 # Read regulon activity per cell
 reg.per.cell <- read.table(
-  paste(root.folder, "/scenic/", foldername, "/pyscenic/regulon_per_cell.csv", sep = ""), 
+  paste(root.folder, "/Result/", foldername, "/pyscenic/regulon_per_cell.csv", sep = ""), 
   header = TRUE
 )
 rownames(reg.per.cell) <- rownames(sub.meta)
@@ -259,7 +259,7 @@ regulon.exp <- as.matrix(t(reg.per.cell))
 
 # Read regulon-target gene matrix
 reg.per.gene <- read.table(
-  paste(root.folder, "/scenic/", foldername, "/pyscenic/regulon_per_gene.csv", sep = ""), 
+  paste(root.folder, "/Result/", foldername, "/pyscenic/regulon_per_gene.csv", sep = ""), 
   header = TRUE
 )
 temp.list <- colnames(reg.per.gene)
