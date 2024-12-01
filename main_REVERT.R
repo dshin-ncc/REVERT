@@ -173,7 +173,8 @@ cds_subset <- cds_s[to_be_tested, ]
 
 ##### Select DEGs by q-value
 ######################################
-qval.list <- c(0.00001, 0.001, 0.05)
+# qval.list <- c(0.00001, 0.001, 0.05)
+qval.list <- c(0.05)
 diff_test_res <- differentialGeneTest(cds_subset, fullModelFormulaStr = "~sm.ns(Pseudotime)")
 sig_diff <- diff_test_res[, c("gene_short_name", "pval", "qval")]
 
@@ -320,7 +321,7 @@ for different time steps (smoothing window width).
 '''
 
 # Define the list of smoothing window widths
-moving.width.list <- c(1, 3, 40, 100, 300, 500) # Smoothing window widths for expression data
+moving.width.list <- c(1, 50, 100, 300, 500) # Smoothing window widths for expression data
 
 # Define switching genes obtained from the GeneSwitches algorithm
 switching.genes <- switch.genes$sg_total$geneID
@@ -367,7 +368,7 @@ in the inferred pseudo-time axis, respectively.
 '''
 
 # Define hyperparameters
-moving.width.list <- c(1, 3, 40, 100, 300, 500) # Smoothing window widths for attractor simulation
+moving.width.list <- c(1, 50, 100, 300, 500) # Smoothing window widths for attractor simulation
 ratio.att <- 0.2 # Fraction of cells at the endpoints used to define normal and cancer attractors
 Ndeg.set <- 3    # Number of DEG sets to analyze
 
