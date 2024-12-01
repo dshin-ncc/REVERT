@@ -644,7 +644,7 @@ func_logic_infer <- function(res.dir, maxCore, moving.width.list, corr.cutoff, s
     }
     
     
-    ##### Determine BOOLEAN LOGICs of the network (SCNS)
+    ##### Determine BOOLEAN LOGICs of the network (Pseudotime-network-inference)
     ####################################################
 
     for (ideg in 1:length(glist)) {
@@ -671,8 +671,9 @@ func_logic_infer <- function(res.dir, maxCore, moving.width.list, corr.cutoff, s
 
         tstep <- tstep.list[i.step]
 
-        ##### RUN SCNS
-        ##### The outputs of scns will be saved to ROOT.FOLDER/scns_results/.
+        ##### RUN Logic inference function based on Pseudotime-network-inference
+        #####       (https://github.com/fionahamey/Pseudotime-network-inference)
+        ##### The outputs of Pseudotime-network-inference will be saved to ROOT.FOLDER/scns_results/.
         ##### put rule2logic.R file into the folder 'scns_results'.
         #####################################################################
               
@@ -686,7 +687,7 @@ func_logic_infer <- function(res.dir, maxCore, moving.width.list, corr.cutoff, s
         system(paste(pythonexe,logicpy, tstep, modewidth, ncores, smooth.exp.data.path, edge.data.path, sep=" "))
         
         
-        ##### run rule2logic: convert scns output rules to logic forms 
+        ##### run rule2logic: convert Pseudotime-network-inference output rules to logic forms 
         ##### modify the folder paths in rule2logic as your environments before running.
         ################################################################################
         # setwd(logic.res.folder)      
