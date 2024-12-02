@@ -103,6 +103,12 @@ Key Steps
 Output
 
 Dynamic GRNs that model state transitions in the biological system.
+Result files are saved as the following naming convention, where x and xxx represents numbers: 
+* agreement_level_xDEG_stepxxx_mode1.png : Histogram of agreement levels
+* logic_union_xDEG_stepxxx_mode1.png: Visual represntation of the inferred logic rules
+* logic_net_xDEG_stepxxx_mode1.png: Gene regulatory network constructed from the inferred logic rules
+* basin_histogram_xDEG_stepxxx_mode1.png: Histogram represnting the basin of distribution
+* top_attractors_xDEG_stepxxx_mode1.png: Visualization of the top 5 attractors
 
 
 
