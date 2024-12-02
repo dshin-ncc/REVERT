@@ -370,7 +370,7 @@ in the inferred pseudo-time axis, respectively.
 # Define hyperparameters
 moving.width.list <- c(1, 50, 100, 300, 500) # Smoothing window widths for attractor simulation
 ratio.att <- 0.2 # Fraction of cells at the endpoints used to define normal and cancer attractors
-Ndeg.set <- 3    # Number of DEG sets to analyze
+Ndeg.set <- length(qval.list)    # Number of DEG sets to analyze
 
 # Perform attractor analysis
 func_attractor_analysis(
