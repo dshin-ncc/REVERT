@@ -103,7 +103,8 @@ Key Steps
 Output
 
 Dynamic GRNs that model state transitions in the biological system.
-Result files are saved as the following naming convention, where x and xxx represents numbers: 
+
+Result files are saved as the following naming convention, where x and xxx represent numbers: 
 * agreement_level_xDEG_stepxxx_mode1.png : Histogram of agreement levels
 * logic_union_xDEG_stepxxx_mode1.png: Visual represntation of the inferred logic rules
 * logic_net_xDEG_stepxxx_mode1.png: Gene regulatory network constructed from the inferred logic rules
@@ -129,7 +130,8 @@ Key Steps
 	2.	Define Normal and Cancer Attractors:
 	•	Use the first and last cells in the pseudo-time trajectory to define normal and cancer states.
 
-Biological Importance
+Output
 
-Attractors provide insights into the stability of normal and cancer states, as well as the transitions between them.
+Result files summarized across all hyper-parameters are saved with the following naming convention, where x represents a number:
+* All_PLOTS_xDEG.png 
 
